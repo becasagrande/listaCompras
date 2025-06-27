@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lista de Compras – Azul</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilo personalizado -->
+  <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container py-4">
+    <h1 class="text-center mb-4 text-primary">🛒 Lista de Compras</h1>
+    <form id="form-item" class="row g-2 mb-3">
+      <div class="col-md-8">
+        <input type="text" id="input-item" class="form-control" placeholder="Nome do item" required>
+      </div>
+      <div class="col-md-2">
+        <input type="number" id="input-qty" class="form-control" placeholder="Qtd" min="1" value="1" required>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Adicionar</button>
+      </div>
+    </form>
+
+    <ul id="lista-itens" class="list-group mb-3"></ul>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <button id="btn-clear" class="btn btn-outline-danger">Limpar Tudo</button>
+      <span id="contador" class="fw-bold">Total itens: 0</span>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>
+

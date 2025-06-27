@@ -1,0 +1,49 @@
+body {
+    background-color: #f8f9fa;
+  }
+  :root {
+    /* Define cores azuis inspiradas no Bootstrap */
+    --bs-primary: #0d6efd;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-body-bg: #e9f2ff;
+    --bs-body-color: #0d1f3e;
+  }
+  body {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color);
+  }
+  .btn-primary {
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .btn-primary:hover {
+    background: #084abb;
+    border-color: #084abb;
+  }
+  .btn-outline-danger {
+    color: #c82333;
+    border-color: #c82333;
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn-outline-danger:hover {
+    background: #c82333;
+    color: white;
+  }
+  .list-group-item {
+    background-color: white;
+    border: 1px solid rgba(var(--bs-primary-rgb), 0.2);
+    margin-bottom: 0.3rem;
+    border-radius: 0.4rem;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #form-item .form-control {
+    border-radius: 0.5rem;
+  }
+  #contador {
+    font-size: 1.1rem;
+  }
+    
