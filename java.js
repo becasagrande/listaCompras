@@ -51,6 +51,12 @@ function renderList() {
     const btnDel = document.createElement('button');
     btnDel.className = 'btn btn-sm btn-outline-danger';
     btnDel.textContent = '❌';
+
+    /**
+     * 🟡 3. Ouvinte de clique no botão ❌ de cada item
+     * - Remove o item individual da lista
+     * - Atualiza localStorage e contador
+     */
     btnDel.addEventListener('click', () => {
       itens.splice(idx, 1); // remove do array
       saveItens();
@@ -64,11 +70,11 @@ function renderList() {
 }
 
 /**
- * Evento submit do formulário:
- * - Previne envio padrão
- * - Lê valores, validação básica
- * - Evita duplicatas, incrementa qtd se existir
- * - Atualiza armazenamento, interface e contador
+ * 🟢 1. Ouvinte de envio do formulário
+ * - Captura envio do form
+ * - Lê os valores e valida
+ * - Adiciona ou atualiza item no array
+ * - Atualiza localStorage, lista e contador
  */
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -97,10 +103,10 @@ form.addEventListener('submit', (e) => {
 });
 
 /**
- * Evento no botão Limpar Tudo:
- * - Confirmação com o usuário
- * - Esvazia array e localStorage
- * - Atualiza a interface
+ * 🔴 2. Ouvinte de clique no botão "Limpar Tudo"
+ * - Confirma com o usuário
+ * - Limpa o array e o localStorage
+ * - Atualiza a lista e o contador
  */
 btnClear.addEventListener('click', () => {
   if (confirm('Deseja realmente limpar toda a lista?')) {
@@ -111,10 +117,16 @@ btnClear.addEventListener('click', () => {
   }
 });
 
-// Inicialização após carregar o DOM
+/**
+ * 🔵 4. Ouvinte de carregamento do DOM
+ * - Executa ao carregar a página
+ * - Carrega dados salvos
+ * - Renderiza lista e contador
+ */
 document.addEventListener('DOMContentLoaded', () => {
   loadItens();
   renderList();
   updateContador();
 });
+
 
