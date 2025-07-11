@@ -46,4 +46,21 @@ body {
   #contador {
     font-size: 1.1rem;
   }
+    body.modo-escuro {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+  
+    body.modo-escuro input,
+    body.modo-escuro button,
+    body.modo-escuro .list-group-item {
+      background-color: #333;
+      color: #f0f0f0;
+      border-color: #555;
+    }
+  
+    body.modo-escuro .btn-outline-danger {
+      border-color: #ff6666;
+      color: #ff6666;
+    }
     
